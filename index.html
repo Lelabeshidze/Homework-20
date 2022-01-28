@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="table-content ">
+        <div class="table-header">
+            <h1>User management</h1>
+            <button class="newuser-btn">New User</button>
+        </div>
+        <table>
+            <thead>
+            <tr>
+                <th>first_name</th>
+                <th>last_name</th>
+                <th>zip</th>
+                <th>personal_number</th>
+                <th>mobile_number</th>
+                <th>gender</th>
+                <th>email</th>
+                <th>status</th>
+            </tr>
+           </thead>
+           <thead>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <div class="buttons">
+                    <button>Edit</button>
+                    <button>Delete</button>
+                    </div>
+                </td>
+            </tr>
+        </thead>
+        <tbody></tbody>
+        </table>
+    </div>
+    <div class="modal-form">
+        <div class="modal-1">
+            <form id="user-signup-form" action="/save-user" method="post" novalidate>
+                <input id="user_id" type="hidden" placeholder="">
+                <div class="form-field">
+                    <label for="first_name">Enter First Name</label>
+                    <input id="first_name" type="text" placeholder="First Name" required minlength="4">
+                    <span class="field-error" id="first_name-error"></span>
+                </div>
+                <div class="form-field">
+                    <label for="last_name">Enter Last name</label>
+                    <input id="last_name" type="text" placeholder="Last name" required>
+                    <span class="field-error" id="last_name-error"></span>
+                </div>
+                <div class="form-field">
+                    <label for="zip">Enter Zip</label>
+                    <input id="zip" type="text" placeholder="Zip" required>
+                    <span class="field-error" id="zip-error"></span>
+                </div>
+                <div class="form-field">
+                    <label for="personal_number">Enter ID</label>
+                    <input id="personal_number" type="number" placeholder="personal_number"  required>
+                    <span class="field-error" id="personal_number-error"></span>
+                </div>
+                <div class="form-field">
+                    <label for="mobile_number">Enter Mobile</label>
+                    <input id="mobile_number" type="number" placeholder="mobile_number"  required>
+                    <span class="field-error" id="mobile_number-error"></span>
+                </div>
+                <div class="form-field">
+                    <label for="gender">Enter gender</label>
+                    <input id="gender" type="text" placeholder="gender" required>
+                    <span class="field-error" id="gender-error"></span>
+                </div>
+                <div class="form-field">
+                    <label for="email">Enter Email</label>
+                    <input id="email" type="email" placeholder="email" required>
+                    <span class="field-error" id="email-error"></span>
+                </div>
+                <div class="form-field">
+                    <label for="status">Enter status</label>
+                    <input id="status" type="text" placeholder="status" required>
+                    <span class="field-error" id="status-error"></span>
+                </div>
+                <button type="submit">Save</button>
+                <button class="modal-close">X</button>
+            </form>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
